@@ -1,0 +1,24 @@
+Вывод скрипта
+
+Корректный:
+number=15
+number.bit_count()=4
+number=-17
+number.bit_count()=2
+number=123435885
+number.bit_count()=19
+number=0
+number.bit_count()=0
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+number=15
+'int' object has no attribute 'bit_count'
+number=-17
+'int' object has no attribute 'bit_count'
+number=123435885
+'int' object has no attribute 'bit_count'
+number=0
+'int' object has no attribute 'bit_count'
