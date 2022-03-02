@@ -1,0 +1,16 @@
+Вывод скрипта
+
+Корректный:
+  File "test.py", line 7
+    foo(0, z for z in range(10), 0, 0)
+           ^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Generator expression must be parenthesized
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+  File "test.py", line 7
+    		foo(0, z for z in range(10), 0, 0)
+    		       ^
+SyntaxError: Generator expression must be parenthesized
