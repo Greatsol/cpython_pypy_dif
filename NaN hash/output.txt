@@ -1,0 +1,14 @@
+Вывод скрипта
+
+Корректный:
+float_nan_hash=8783451457965
+decimal_nan_hash=8783451478761
+(float_nan_hash == decimal_nan_hash)=False
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+float_nan_hash=0
+decimal_nan_hash=0
+(float_nan_hash == decimal_nan_hash)=True
