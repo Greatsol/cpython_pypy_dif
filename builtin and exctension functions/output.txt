@@ -1,0 +1,12 @@
+Вывод скрипта
+
+Корректный:
+A
+'B' object cannot be interpreted as an integer
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+A
+A
