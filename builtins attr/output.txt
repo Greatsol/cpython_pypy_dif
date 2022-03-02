@@ -1,0 +1,11 @@
+Вывод скрипта
+
+Корректный:
+('print' in foo.__builtins__)=True
+('ord' in foo.__builtins__)=True
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+'function' object has no attribute '__builtins__'
