@@ -1,0 +1,52 @@
+Вывод скрипта
+
+Корректный:
+Staticmethod func call
+Staticmethod func call
+Staticmethod func call
+TypeError: 'classmethod' object is not callable
+Classmethod func call
+Classmethod func call
+
+Attributes check:
+func.__name__='func1'
+func.__doc__='Some doc for staticmethod func'
+func.__module__='__main__'
+func.__annotations__={}
+func.__qualname__='func1'
+func.__wrapped__=<function func1 at 0x7f199073c040>
+
+Attributes check:
+func.__name__='func2'
+func.__doc__='Some doc for classmethod func'
+func.__module__='__main__'
+func.__annotations__={}
+func.__qualname__='func2'
+func.__wrapped__=<function func2 at 0x7f19905de170>
+
+
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+TypeError: 'staticmethod' object is not callable
+Staticmethod func call
+Staticmethod func call
+TypeError: 'classmethod' object is not callable
+Classmethod func call
+Classmethod func call
+Attributes check:
+AttributeError: 'staticmethod' object has no attribute '__name__'
+func.__doc__='staticmethod(function) -> static method\n\nConvert a function to be a static method.\n\nA static method does not receive an implicit first argument.\nTo declare a static method, use this idiom:\n\n     class C:\n         def f(arg1, arg2, ...): ...\n         f = staticmethod(f)\n\nIt can be called either on the class (e.g. C.f()) or on an instance\n(e.g. C().f()).  The instance is ignored except for its class.'
+AttributeError: 'staticmethod' object has no attribute '__module__'
+AttributeError: 'staticmethod' object has no attribute '__annotations__'
+AttributeError: 'staticmethod' object has no attribute '__qualname__'
+AttributeError: 'staticmethod' object has no attribute '__wrapped__'
+Attributes check:
+AttributeError: 'classmethod' object has no attribute '__name__'
+func.__doc__='classmethod(function) -> class method\n\nConvert a function to be a class method.\n\nA class method receives the class as implicit first argument,\njust like an instance method receives the instance.\nTo declare a class method, use this idiom:\n\n  class C:\n      def f(cls, arg1, arg2, ...): ...\n      f = classmethod(f)\n\nIt can be called either on the class (e.g. C.f()) or on an instance\n(e.g. C().f()).  The instance is ignored except for its class.\nIf a class method is called for a derived class, the derived class\nobject is passed as the implied first argument.'
+AttributeError: 'classmethod' object has no attribute '__module__'
+AttributeError: 'classmethod' object has no attribute '__annotations__'
+AttributeError: 'classmethod' object has no attribute '__qualname__'
+AttributeError: 'classmethod' object has no attribute '__wrapped__'
