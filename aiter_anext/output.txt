@@ -1,0 +1,12 @@
+Вывод скрипта
+
+Корректный:
+0
+1
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+NameError: name 'aiter' is not defined
+NameError: name 'anext' is not defined

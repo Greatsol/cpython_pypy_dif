@@ -1,2 +1,2 @@
 # cpython_pypy_dif
-9 / 12
+10 / 12
