@@ -1,0 +1,18 @@
+Вывод скрипта
+
+Корректный:
+  5          10 LOAD_NAME                3 (x)
+             12 POP_TOP
+             14 LOAD_CONST               1 (None)
+             16 RETURN_VALUE
+
+Cpython:
+Совпадает с корректным
+
+Pypy:
+  5          10 LOAD_NAME                3 (x)
+             12 POP_TOP
+             14 LOAD_CONST               2 ('z.w')
+             16 POP_TOP
+             18 LOAD_CONST               0 (None)
+             20 RETURN_VALUE
